@@ -1,0 +1,22 @@
+import string
+
+def getRidOfPunctuation(text):
+    text = text.lower()
+    
+    for i in range (len(string.punctuation)):
+        text = text.replace(string.punctuation[i], ' ')
+    
+    for i in range (len(text)):
+        j = i 
+        removed = False
+        
+        while(j < len(text) and text[j] == ' '):
+            j += 1
+            removed = True
+        
+        if(removed):
+            text = text[0:i] + " " + text[j:]
+    
+    return text
+
+print(getRidOfPunctuation("he*llo"))
