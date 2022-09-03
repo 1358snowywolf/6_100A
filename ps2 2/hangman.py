@@ -77,24 +77,21 @@ def hangman(secret_word):
     '''
     Starts up an interactive game of Hangman.
     
-    * At the start of the game, let the user know how many 
-      letters the secret_word contains and how many guesses s/he starts with.
+    * At the start of the game, lets the user know how many 
+      letters the secret_word contains and how many guesses they start with.
       
     * The user should start with 6 guesses
 
     * Before each round, you should display to the user how many guesses
-      s/he has left and the letters that the user has not yet guessed.
+      they have left and the letters that the user has not yet guessed.
     
-    * Ask the user to supply one guess per round. Remember to make
-      sure that the user puts in a letter!
+    * Ask the user to supply one guess per round.
     
-    * The user should receive feedback immediately after each guess 
+    * The user receives feedback immediately after each guess 
       about whether their guess appears in the computer's word.
 
-    * After each guess, you should display to the user the 
+    * After each guess, display to the user the 
       partially guessed word so far.
-    
-    Follows the other limitations detailed in the problem write-up.
     '''
     
     secret_word = choose_word(load_words())
@@ -209,28 +206,25 @@ def show_possible_matches(my_word):
 
 def hangman_with_hints(secret_word):
     '''
-    Starts up an interactive game of Hangman w/ hints this time
+    Starts up an interactive game of Hangman but now with hints
     
-    * At the start of the game, let the user know how many 
-      letters the secret_word contains and how many guesses s/he starts with.
+    * At the start of the game, lets the user know how many 
+      letters the secret_word contains and how many guesses they start with.
       
     * The user should start with 6 guesses
-    
-    * Before each round, you should display to the user how many guesses
-      s/he has left and the letters that the user has not yet guessed.
-    
-    * Ask the user to supply one guess per round. Make sure to check that the user guesses a letter
-      
-    * The user should receive feedback immediately after each guess 
-      about whether their guess appears in the computer's word.
 
-    * After each guess, you should display to the user the 
-      partially guessed word so far.
-      
-    * If the guess is the symbol *, print out all words in wordlist that
-      matches the current guessed word. 
+    * Before each round, you should display to the user how many guesses
+      they have left and the letters that the user has not yet guessed.
     
-    Follows the other limitations detailed in the problem write-up.
+    * Ask the user to supply one guess per round.
+    
+    * The user receives feedback immediately after each guess 
+      about whether their guess appears in the computer's word.
+      
+    * If user gives *, then list out all the words in the list that fit
+
+    * After each guess, display to the user the 
+      partially guessed word so far.
     '''
     
     secret_word = choose_word(load_words())
